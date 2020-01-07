@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<link href="./css/imain.css" rel="stylesheet" media="all">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+    <a class="navbar-brand" rel="home" href="./index.html" title="Mother">
+        <img style="max-width:45px; margin-top: -7px;"
+             src="./logo.png">
+    </a>
+<a class="navbar-brand" href="./index.html"><b>Cookbook</b></a>
+</div>
+<div class="collapse navbar-collapse" id="alignment-example">
+<ul class="nav navbar-nav">
+<li><a href="./page2.html">Add New</a></li>
+<li><a href="./login.php">Login</a></li>
+<li><a href="#about">About Me</a></li>
+</ul>
+<form class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" class="form-control" name="search">
+</div>
+<button type="submit" onclick="poq.loadPage1();" class="btn btn-default">Search</button>
+</form>
+</div>
+</div>
+</nav>
+
+
+
+<div class="container">
+  <div class='starter row'>
+    <div class="col-sm-12 col-md-9 col-xs-12 col-lg-9">
+        <div class='row'>
+          <div class='col-sm-12 col-md-11 col-xs-12 col-lg-10'>
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li class="previous"><a class="but1" v-on:click="prev();" href="#"><span aria-hidden="true">←</span> Older Posts</a></li>
+                    <li class="next"><a class="but1" v-on:click="next();" href="#" >Newer Posts<span aria-hidden="true">→</span></a></li>
+                </ul>
+            </nav>
+            <hr>
+          </div>
+        </div>
+        <div class="row" v-for="d in fdata">
+   	   <blog-post
+  		v-for="c in d"
+  		v-bind:mdata="c">
+	   </blog-post>
+        </div>
+        <hr>
+    </div>
+
+    <div class="col-sm-12 col-md-3 col-xs-12 col-lg-3">
+         <div class="form-group">
+          <label for="pgn">Cards on one page</label>
+          <select name="pgn" class="form-control" v-model="limit">
+             <option>2</option>
+             <option>4</option>
+             <option>6</option>
+             <option>8</option>
+             <option>12</option>
+          </select>
+        </div>
+        <div class='hidden-sm hidden-xs'><h1 style='height: 70px;'></h1></div>
+        <div id="about" class="panel panel-default">
+            <div class="panel-body">
+                <h4 class="text-center">About me!</h4>
+                <img src="./IMG_O.jpg" alt="" class="img-thumbnail img-responsive">
+                <h5 class="text-center">Olga Lipnitska</h5>
+                <p>I love to pamper my family and they are grateful to me</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer class="navbar navbar-default">
+    <div class="container-fluid text-center">
+        <p class="text-muted">© Copyright 2018. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/sc1.js"></script>
+
+</html>

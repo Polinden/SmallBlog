@@ -1,0 +1,52 @@
+  body {
+      font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+      background: #E3DAC9;
+   }
+   .navbar {
+      padding-top: 12px;
+      min-height:75px !important
+   }
+   .navbar a {
+      color: white !important;
+      font-size: 140%;
+      padding-right: 40px;
+   }
+   .navbar a:hover {
+      color: yellow !important;
+   }
+   .navbar-default {
+     background:  #2c6ed5;;
+   }
+   .navbar-default p {
+     color: white;
+     padding: 8px;
+     font-size: 120%;
+   }   
+   button {
+      font-size: 110% !important;;
+   }
+   .but1 {
+       font-size: 110%;
+       font-weight:bold;
+   }
+
+   .replaced1 {
+      display: table-cell;
+   }
+
+   .replaced1 p {
+      padding-right: 6px;
+      font-size: 98%;
+   }
+
+   .replaced1 h3 {
+      font-size: 140%;
+      padding-right: 6px;
+      min-height: 2em;
+   }
+
+   .img1 {
+      max-height: 280px;
+   }
+
+

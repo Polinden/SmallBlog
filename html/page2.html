@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="./css/page1.css" rel="stylesheet" media="all">
+</head>
+
+
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+           <form enctype="multipart/form-data" action="./send.php" method="POST">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">New Recipe</h2>
+                </div>
+                <div class="card-body">
+                        <div class="form-row">
+                            <div class="name">Dish</div>
+                            <div class="value">
+                                <input required class="input--style-6" type="text" name="dish">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Short description</div>
+                            <div class="value">
+                                <input required class="input--style-6" type="text" name="short">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Ingredients</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="ingr" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Link</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="link" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Recipe</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="recipe" placeholder="Not too long, please..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Upload Picture</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="pic" id="file">
+                                    <input class="input-file" type="hidden" name="date" id="date">
+                                    <label class="label--file" for="file">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc">Upload picture. Max file size 50 MB</div>
+                            </div>
+                        </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Save</button>
+                    <button class="btn btn--radius-2 btn--red" onclick='window.location="./index.html"'; type="cansel">Cansel</button>
+                </div>
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/im1.js"></script>
+ 
+</body>
+
+</html>

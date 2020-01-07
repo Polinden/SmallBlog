@@ -1,0 +1,5 @@
+php_value file_uploads 1
+php_value upload_max_filesize 2M
+php_value session.use_strict_mode 1
+php_value display_errors 1
+php_value doc_root /var/www/html

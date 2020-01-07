@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<link href="./css/page2.css" rel="stylesheet" media="all">
+
+
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+    <a class="navbar-brand" rel="home" href="./index.html" title="Mother">
+        <img style="max-width:45px; margin-top: -7px;"
+             src="./logo.png">
+    </a>
+<a class="navbar-brand" href="./index.html">Cookbook</a>
+</div>
+<div class="collapse navbar-collapse" id="alignment-example">
+<ul class="nav navbar-nav">
+<li><a href="./page2.html">Add New</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+<body>
+<html>
+     
+<div class="container col-lg-12 main">
+        <div class="col-lg-12 post">
+                    <h2 id="title" class="ubuntu">{{ dish }}</h2>
+                    <div class="body-text">
+                        <p id='author'  class='text-muted ubuntu'>{{ author }}</p>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6"><p id="short">{{ short }}</p></div>
+                        </div>
+
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-12"><p><strong>Ingredients</strong></p>
+                                <p id="ingr" >{{ ingr }}</p></div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p><strong>Recipe</strong></p>
+                                <p style='word-wrap: break-word;' id="recipe">{{ recipe }}</p>
+                            </div>
+                            <div class="col-lg-6">
+                               <p><img id="pic" v-bind:src="pic" width="100%"></p>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                               <p><strong>Mark</strong></p>
+
+
+      <div class="star-rating">
+        <span v-for="i in stars" v-bind:id='i.key' v-on:click="rate" v-bind:class="['fa', i.cl]"></span>
+      </div>
+                   
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p><strong>Link</strong></p>
+                                <a id="llink" v-bind:href="link"><p id="link">{{ link }}</p></a>
+                                <br/>
+                                <p><i>Thanks!</i></p>
+                                <form action="./remove.php" method="POST">
+                                <input type="hidden" name="rid" v-model="rid">
+                                <input type="hidden" name="rev" v-model="rev">
+                                <input type="hidden" name="picr" v-model="picr">
+                                <input type="submit" name="exit" class="btn btn-danger btn-lg pull-right" value="Remove">
+				</form>
+                            </div>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+</div>
+</div>
+
+
+<script src="./js/sc2.js"></script>
+
+</body>
+</html>

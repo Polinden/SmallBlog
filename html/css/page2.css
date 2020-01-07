@@ -1,0 +1,67 @@
+   .main, body {
+      font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+      background: #E3DAC9;
+      font-size: 160%;
+   }
+   .navbar {
+      font-size: 85%;
+      font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+      padding-top: 12px;
+      min-height:75px !important
+   }
+   .navbar a {
+      color: white !important;
+      font-size: 140%;
+      padding-right: 40px;
+   }
+   .navbar a:hover {
+      color: yellow !important;
+   }
+   .navbar-default {
+     background:  #2c6ed5;;
+   }
+   .navbar-default p {
+     color: white;
+     padding: 8px;
+     font-size: 120%;
+   }
+    .header
+    {
+        padding:10px;
+    }
+    .post h2 {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    .post h2 a
+    {
+        color: #333;
+        text-decoration: none;
+        display: block;
+    }
+
+    .post
+    {
+        border-radius: 8px;
+        padding: 20px !important;
+        overflow: hidden;
+        position: relative;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+        background-clip: padding-box;
+        background:#fff;
+    }
+
+    .star-rating {
+        line-height:32px;
+        font-size:1.25em;
+    }
+
+    .star-rating .fa-star{color: red;}
+
+    button {
+        padding : 10px !important;
+        font-size: 95% !important;
+    }
